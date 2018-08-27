@@ -10,7 +10,6 @@ public class Query implements GraphQLRootResolver {
     public Query(LinkRepository linkRepository) {
         this.linkRepository = linkRepository;
     }
-
     public List<Link> allLinks() {
         return linkRepository.getAllLinks();
     }

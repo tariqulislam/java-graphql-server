@@ -19,7 +19,7 @@ public class GraphQLEndpoint extends SimpleGraphQLServlet {
         log.info("repository is open", linkRepository);
         return SchemaParser.newParser()
                 .file("schema.graphqls")
-                .resolvers(new Query(linkRepository))
+                .resolvers(new Query(linkRepository), new Mutation(linkRepository))
                 .build()
                 .makeExecutableSchema();
 
