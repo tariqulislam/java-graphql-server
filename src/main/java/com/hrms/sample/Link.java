@@ -1,30 +1,46 @@
 package com.hrms.sample;
 
 public class Link {
-    public Link(String url, String description) {
-        this.url = url;
-        this.description = description;
-    }
+  private String id;
+  private String url;
+  private String description;
 
-    private  String url;
 
-    public String getUrl() {
-        return url;
-    }
+  public Link(String url, String description) {
+    this(null,url, description);
+  }
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
+  public Link(String id, String url, String description) {
+    this.id = id;
+    this.url = url;
+    this.description = description;
+  }
 
-    public String getDescription() {
-        return description;
-    }
+  public String getId() {
+    return id;
+  }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+  public void setId(String id) {
+    this.id = id;
+  }
 
-    private String description;
+  public String getUrl() {
+    return url;
+  }
+
+  public void setUrl(String url) {
+    this.url = url;
+  }
+
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+
 
 
 }
